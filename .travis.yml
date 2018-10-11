@@ -25,6 +25,6 @@ install:
   - bin/develop up --force
 script:
   - bin/py.test ./openprocurement/tender/competitivedialogue/tests/ --cov=openprocurement.tender.competitivedialogue
-  - bin/pylint --errors-only --disable=no-member,not-an-iterable,bad-super-call,unsubscriptable-object,too-many-format-args openprocurement.tender.competitivedialogue
+  - bin/pylint --errors-only --disable=no-member,not-an-iterable,bad-super-call,unsubscriptable-object,too-many-format-args,function-redefined openprocurement.tender.competitivedialogue
 after_success:
   - bin/coveralls
