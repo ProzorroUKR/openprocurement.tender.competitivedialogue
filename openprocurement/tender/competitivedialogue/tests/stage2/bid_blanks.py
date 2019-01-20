@@ -30,7 +30,8 @@ def create_tender_bidder_firm(self):
                                                                   "name": u"Державне управління справами",
                                                                   "name_en": u"State administration",
                                                                   "telephone": u"0440000000"
-                                                              }
+                                                              },
+                                                              "scale": "micro"
                                                           }],
                                                           "value": {"amount": 500}}},
                                   status=403)
@@ -707,7 +708,7 @@ def create_tender_biddder_invalid_ua(self):
     self.assertEqual(response.content_type, 'application/json')
     self.assertEqual(response.json['status'], 'error')
     self.assertEqual(response.json['errors'], [
-        {u'description': u"invalid literal for int() with base 10: 'contactPoint'", u'location': u'body',
+        {u'description': u"invalid literal for int() with base 10: 'scale'", u'location': u'body',
          u'name': u'data'},
     ])
 
@@ -732,7 +733,8 @@ def create_tender_biddder_invalid_ua(self):
                                                                   "name": u"Державне управління справами",
                                                                   "name_en": u"State administration",
                                                                   "telephone": u"0440000000"
-                                                              }
+                                                              },
+                                                              "scale": "micro"
                                                           }],
                                                           "value": {"amount": 500}}},
                                   status=403)
