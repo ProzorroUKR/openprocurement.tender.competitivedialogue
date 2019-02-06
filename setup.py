@@ -18,6 +18,7 @@ api_requires = requires + [
 test_requires = api_requires + requires + [
     'webtest',
     'python-coveralls',
+    'freezegun',
 ]
 
 docs_requires = requires + [
